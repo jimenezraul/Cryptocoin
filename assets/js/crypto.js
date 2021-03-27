@@ -103,12 +103,6 @@ for (var i = 0; i < crypto_list.length; i++){
     }
 }
 
-start("btc");
-
-// // function get_crypto_info(cryp) {
-// //     start(cryp);
-// // };
-
 
 button = document.getElementsByClassName('button')
 for (var i = 0; i < button.length; i++){
@@ -127,6 +121,7 @@ function search() {
     let section = document.getElementsByTagName('section');
     for (i = 0; i < section.length; i++){
         let name = section[i].getElementsByClassName('name')[0].getElementsByTagName('h5')[0].innerHTML;
+        console.log(name.toUpperCase().indexOf(filter))
         if (name.toUpperCase().indexOf(filter) > -1) {
             section[i].style.display = "";
         } else {
@@ -134,3 +129,5 @@ function search() {
         }
     }
 }
+
+start("btc");
